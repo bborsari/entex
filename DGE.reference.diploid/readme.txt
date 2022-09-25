@@ -6,11 +6,12 @@
 
 
 
-#------------------------
-# DEG analysis of       |
-# each indiv. using     |
-# tissues as replicates | 
-#------------------------
+#-----------------------------
+# DEG analysis of            |
+# each indiv. using          |
+# tissues as replicates      | 
+# see Fig. S2 and Data S5D-I |
+#-----------------------------
 
 # 1. DEG analysis 
 # ~/software/R-3.5.2/bin/Rscript bin/DE_diploid_4individuals.R
@@ -23,14 +24,13 @@
 # cat entex.4indivs/ENC00*/res.ENC00* | awk '$3>1 && $NF < 0.1' | cut -f1 | sort -u |cut -d "." -f1 > entex.4indivs/upreg.tsv
 # cat entex.4indivs/ENC00*/res.ENC00* | awk '$3<-1 && $NF < 0.1' | cut -f1 | sort -u |cut -d "." -f1 > entex.4indivs/downreg.tsv
 
-# 4. list of genes for entex portal obtained with:
-# bin/table.DE.genes.R
 
 
 #-------------------------------
 # DEG analyis of 7 experiments |
 # 6 exps. w/ tech reps         |
 # 1 exp. duplicated            |
+# see Data S5J                 |
 #-------------------------------
 
 # 1. DEG analysis 
@@ -48,6 +48,7 @@
 
 #--------------------------
 # DEG analysis of GM12878 |
+# see Data S5J            |
 #--------------------------
 
 # 1. DEG analysis
@@ -60,3 +61,13 @@
 # 3. get list of all DE genes
 awk '$3>1 && $NF < 0.1' GM12878/res.GM12878.batch.tsv | cut -f1 | sort -u |cut -d "." -f1 > GM12878/upreg.tsv
 awk '$3<-1 && $NF < 0.1' GM12878/res.GM12878.batch.tsv | cut -f1 | sort -u |cut -d "." -f1 > GM12878/downreg.tsv
+
+
+#-------------------------------------|
+# The list of genes for               |
+# entex portal obtained with:         |
+# bin/table.DE.genes.R                |
+# - table.DE.genes.tsv                |
+# - table.DE.genes.techReps.liver.tsv |
+# - table.DE.genes.GM12878.tsv        |
+#--------------------------------------
