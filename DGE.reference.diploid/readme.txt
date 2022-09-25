@@ -1,3 +1,11 @@
+#-------------------------
+# The analyses in this   |
+# folder correspond to   |
+# Fig. S2 and Data S5D-J |
+#-------------------------
+
+
+
 #------------------------
 # DEG analysis of       |
 # each indiv. using     |
